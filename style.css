@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url("images/962292DF-CD02-405C-9455-A8A3F4FEE4F2_1_105_c.png") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding-top: 80px;
+  color: white;
+  overflow-x: hidden;
+}
+
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  z-index: -1;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+  width: 100%;
+  max-width: 1400px;
+}
+
+.employee-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px rgba(255, 215, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 24px;
+  text-align: center;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.employee-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 24px rgba(255, 255, 255, 0.3);
+}
+
+.employee-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+  border: 2px solid #ffd700;
+}
+
+.vote-button {
+  background: linear-gradient(to right, #007bff, #ffd700);
+  color: #000;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 16px;
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.8);
+  transition: all 0.3s ease;
+}
+
+.vote-button:hover {
+  box-shadow: 0 0 16px rgba(255, 0, 0, 0.6);
+}
+
+.vote-button.selected {
+  background: #ffd700;
+  color: black;
+  box-shadow: 0 0 16px rgba(0, 123, 255, 0.9);
+}
+
+.countdown-timer {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 12px 20px;
+  border-radius: 16px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.6);
+  z-index: 1000;
+}
